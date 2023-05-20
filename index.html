@@ -2,113 +2,45 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PHOTO EDITOR | Edit Image</title>
-    <link rel="stylesheet" href="css\style.css" />
+    <title>Photo Editor | Home</title>
 
-    <!-- link for the online icon -->
-    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+    <!-- My Style -->
+    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="bar.css" />
+    <!-- My Style -->
   </head>
-
   <body>
-    <div class="main">
-      <div class="Tools">
-        <ul>
-          <li role="tab">
-            <i class="bx bxs-brightness-half"></i>
-            <p>Brightness</p>
-          </li>
-          <li>
-            <i class="bx bxs-adjust"></i>
-            <p>Contrast</p>
-          </li>
-          <li>
-            <i class="bx bx-images"></i>
-            <p>Opacity</p>
-          </li>
-          <li>
-            <i class="bx bxs-brush"></i>
-            <p>Blur</p>
-          </li>
-          <li>
-            <i class="bx bxs-collection"></i>
-            <p>GreyScale</p>
-          </li>
-          <li>
-            <i class="bx bxs-color-fill"></i>
-            <p>Hue Rotate</p>
-          </li>
-          <li>
-            <i class="bx bxs-magic-wand"></i>
-            <p>Saturation</p>
-          </li>
-          <li>
-            <i class="bx bxs-tone"></i>
-            <p>Invert</p>
-          </li>
-          <li>
-            <i class="bx bxs-carousel"></i>
-            <p>Sepia</p>
-          </li>
-        </ul>
+    <!-- Navbar Start -->
+    <nav class="navbar">
+      <a href="home.html" class="navbar-logo">PHOTO EDITOR</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="editor.html" target="_blank">Editor</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+    <!-- Navbar end -->
+
+    <!-- Home Section start -->
+    <section class="showcase">
+      <div class="text">
+        <h2>Never Stop To</h2>
+        <h3>Explore Your Photo</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat.
+        </p>
+        <a href="index.html" target="_blank">Edit Your Image</a>
       </div>
-      <div class="content">
-        <div class="choose_image">
-          <div class="upload_image">
-            <i class="bx bx-image-add"></i><br />
-            <input type="file" name="selectedImage" id="selectedImage" accept="image/jpeg, image/png" />
-            <p id="hint">Choose Image</p>
-          </div>
-        </div>
-        <canvas id="image_canvas"></canvas>
-        <div class="image_holder">
-          <button id="remove_image"><i class="bx bxs-message-square-x"></i></button>
-          <img src="" alt="img" id="image" />
-        </div>
-        <div class="features">
-          <div class="fbutton">
-            <input type="range" max="200" min="50" value="100" id="brightness" class="slider" />
-            <p id="brightVal" class="show_value">100</p>
-          </div>
-          <div class="fbutton">
-            <input type="range" max="200" min="50" value="100" id="contrast" class="slider" />
-            <p id="contVal" class="show_value">100</p>
-          </div>
-          <div class="fbutton">
-            <input type="range" max="100" min="0" value="100" id="opacity" class="slider" />
-            <p id="opacityVal" class="show_value">100</p>
-          </div>
-          <div class="fbutton">
-            <input type="range" max="10" min="0" value="0" id="blur" class="slider" />
-            <p id="blurVal" class="show_value">0</p>
-          </div>
-          <div class="fbutton">
-            <input type="range" max="100" min="0" value="0" id="greyScale" class="slider" />
-            <p id="greyVal" class="show_value">0</p>
-          </div>
-          <div class="fbutton">
-            <input type="range" max="330" min="0" value="0" id="hue" class="slider" />
-            <p id="hueVal" class="show_value">0</p>
-          </div>
-          <div class="fbutton">
-            <input type="range" max="100" min="1" value="0" id="saturation" class="slider" />
-            <p id="saturationVal" class="show_value">0</p>
-          </div>
-          <div class="fbutton">
-            <input type="range" max="100" min="0" value="0" id="invert" class="slider" />
-            <p id="invertVal" class="show_value">0</p>
-          </div>
-          <div class="fbutton">
-            <input type="range" max="100" min="0" value="0" id="sepia" class="slider" />
-            <p id="sepiaVal" class="show_value">0</p>
-          </div>
-        </div>
-        <button id="clearAll"><span>Reset</span><i class="bx bxs-analyse"></i></button>
-        <div onclick="Download_btn()">
-          <button id="download"><span>Download</span><i class="bx bx-export"></i></button>
-        </div>
-      </div>
-    </div>
-    <script src="script.js"></script>
+    </section>
+    <!-- Home Section end -->
+
+    <!-- Footer -->
+    <footer>
+      <p class="copy">&copy; by <a href="https://www.instagram.com/designbyhisyam._" target="_blank">Muhammad Hisyam Syarif - 2023</a></p>
+    </footer>
+    <!-- Footer -->
   </body>
 </html>
