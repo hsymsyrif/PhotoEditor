@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  background-image: url(/home.jpg);
+}
+.main {
+  position: absolute;
+  height: 660px;
+  width: 1050px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 9px;
+  background: #000000;
+  overflow: hidden;
+}
+
+/*Tools part*/
+.Tools {
+  height: 100px;
+  width: 100%;
+  box-shadow: 0.1px 4px 8px 5px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  /*overflow: scroll;*/
+}
+
+/* to make no point or symbol in list's button*/
+.Tools ul {
+  list-style: none;
+  display: flex;
+}
+
+.Tools ul li {
+  width: 120px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  transition: 0.4s;
+  /*padding: 10px 20px;*/
+}
+
+.Tools ul .active_fbutton {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.Tools ul .active_fbutton p {
+  opacity: 1;
+  margin-top: 8px;
+}
+
+/*button after clicked*/
+.Tools ul .active_fbutton i {
+  color: #ffffff;
+}
+
+.Tools ul li i {
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 10px;
+  font-size: 2em;
+}
+
+/*display button*/
+.Tools ul li:hover i {
+  color: #ffffff;
+}
+
+/* button's background when click*/
+.Tools ul li:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.Tools ul li:hover p {
+  opacity: 1;
+  margin-top: 8px;
+}
+
+/*button's font size & opacity*/
+.Tools ul li p {
+  opacity: 100;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/*uploaded image*/
+.content {
+  position: relative;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /*margin-top: 270px;*/
+  margin-left: 50px;
+}
+
+/* "Choose Image" box */
+.choose_image {
+  width: 80%;
+  height: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 15%);
+}
+
+/* "Choose Image" box*/
+.upload_image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  border: 5px dashed rgba(255, 255, 255, 0.819);
+}
+
+/* "Choose Image" text*/
+p#hint {
+  color: rgba(255, 255, 255, 0.819);
+  font-size: 1.5em;
+}
+
+/* "Choose Image" Logo*/
+.upload_image i {
+  font-size: 2.5em;
+  color: rgba(255, 255, 255, 0.819);
+}
+
+/* type of upload image's display*/
+#selectedImage {
+  display: none;
+}
+
+/*canvas */
+#image_canvas {
+  display: none;
+}
+
+/*image holder / size of uploaded picture part*/
+.image_holder {
+  position: relative;
+  display: none;
+  width: 100%;
+  height: 80%;
+}
+
+/* image */
+.image_holder img {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  /*object-fit: fill;*/
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/*remove button*/
+.image_holder button {
+  position: absolute;
+  display: none;
+  top: -30px;
+  right: 0px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: #ff7043;
+  font-size: 1.8em;
+  background: none;
+  transform: rotate(270deg);
+}
+
+/*features part */
+.features {
+  position: absolute;
+  transform: translateY(400px);
+  top: 200px;
+  height: 50px;
+  width: 50%;
+  padding: 0 25px;
+  border-radius: 10px 10px 0 0;
+  transition: 0.5s;
+  box-shadow: 0.1px 4px 8px 5px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.features .active_controller {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.fbutton {
+  display: none;
+}
+
+.fbutton p {
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/*Range slider*/
+input[type="range"] {
+  width: 90%;
+  height: 5px;
+  cursor: pointer;
+  outline: none;
+}
+
+/*clear or reset button */
+#clearAll {
+  position: absolute;
+  top: 520px;
+  right: 20px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+  padding: 10px;
+  color: #17202a;
+  background: #ff7043;
+  transform: translateX(200px);
+  box-shadow: 0.1px 4px 8px 5px rgba(0, 0, 0, 0.1);
+}
+
+#clearAll span {
+  margin-right: 10px;
+}
+
+/*download button*/
+#download {
+  position: absolute;
+  top: 250px;
+  left: 20px;
+  height: 37px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+  padding: 10px;
+  color: #17202a;
+  background: #ff7043;
+  transform: translateY(350px);
+  box-shadow: 0.1px 4px 8px 5px rgba(0, 0, 0, 0.1);
+}
+
+#download span {
+  margin-right: 10px;
+}
